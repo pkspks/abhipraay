@@ -53,4 +53,10 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :members, only: [:show, :index] do
+    resources :payments, only: [:show, :index]
+  end
+
+  root 'members#index'
 end

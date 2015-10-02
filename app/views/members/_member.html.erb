@@ -1,0 +1,9 @@
+<section>
+  <label>Name</label>
+  <span><%= "#{member.first_name} #{member.last_name}" %></span>
+</section>
+
+<section>
+  <label>Payments</label>
+  <span><%= link_to 'payments', member_payments_path(member_id: member.id) %></span>
+</section>
